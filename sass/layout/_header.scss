@@ -1,0 +1,38 @@
+.header {
+	/* sets viewport height to 95% */
+	height: 95vh;
+	/* sets background overlay w/gradient on top of background image */
+	background-image: linear-gradient(
+			to right bottom,
+			rgba($color-primary-light, 0.8),
+			rgba($color-primary-dark, 0.8)
+		),
+		url(../img/hero.jpg);
+	/* sets background to cover screen */
+	background-size: cover;
+	/* sets the top of the image to not move (can set bottom or center as well */
+	background-position: top;
+	/* sets this element to relative position */
+	position: relative;
+	/* clip out bottom right corner x is cross y is vertical*/
+	-webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+	clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+	&__logo-box {
+		position: absolute;
+		top: 4rem;
+		left: 4rem;
+	}
+	&__logo {
+		height: 3.5rem;
+	}
+	&__text-box {
+		position: absolute;
+		/* positions element top left at basically center of page based on parent */
+		top: 40%;
+		left: 50%;
+		/* positions element center at x and y to center element only*/
+		transform: translate(-50%, -50%);
+		text-align: center;
+	}
+}
