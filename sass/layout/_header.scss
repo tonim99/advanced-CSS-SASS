@@ -7,7 +7,7 @@
 			rgba($color-primary-light, 0.8),
 			rgba($color-primary-dark, 0.8)
 		),
-		url(../img/hero.jpg);
+		url(../img/hero-small.jpg);
 	/* sets background to cover screen */
 	background-size: cover;
 	/* sets the top of the image to not move (can set bottom or center as well */
@@ -17,6 +17,15 @@
 	/* clip out bottom right corner x is cross y is vertical*/
 	-webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 	clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+	@media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em){
+		background-image: linear-gradient(
+			to right bottom,
+			rgba($color-primary-light, 0.8),
+			rgba($color-primary-dark, 0.8)
+		),
+		url(../img/hero.jpg);
+	}
 
 	@include respond(phone) {
 		clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
